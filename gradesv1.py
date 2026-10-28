@@ -9,11 +9,8 @@ def calculate_average(grades): #Calculates average of grades
     return average
 
 def get_letter_grade(average): #Gets a letter grade based on average
-    
-    if type(average) != "<class 'float'>" or type(average) != "<class 'int'>":
-        print(type(average))
-        return "Invalid value"
-    elif average < 0 or average > 100:
+    average = int(average)
+    if average < 0 or average > 100:
         return "Invalid value"
     elif 100 >= average >= 90:
         grade_letter = 'A'
